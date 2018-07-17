@@ -1,0 +1,115 @@
+.contact{
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(50,50,93,.07),0 2px 15px rgba(0,0,0,.03);
+    background: #eee;
+    color: rgba(0,0,0,.7);
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1;
+    margin: 0 auto;
+    padding: 5px 15px;
+    position: relative;
+    text-transform: uppercase;
+    top: 10px;
+    text-shadow: 0 1px 0px rgba(255,255,255,.1);
+    width: 70%;
+    z-index: 8;
+    
+    &-form{
+        background: #e7e7e7;
+        border-radius: 5px;
+        box-shadow: 0 10px 35px rgba(50,50,93,.1),0 2px 15px rgba(0,0,0,.05);
+        font-size: 12px;
+        height: 0;
+        left: 0;
+        opacity: 0;
+        overflow-y: hidden;
+        padding: 20px 20px;
+        position: relative;
+        top: 0;
+        transition: all .3s;
+        width: 100%;
+        z-index: 7;
+        
+        &.active{
+            height: 395px;
+            opacity: 1;
+            z-index: 7;
+        }
+        
+        .close{
+            color: rgba(0,0,0,.7);
+            position: absolute;
+            right: 20px;
+            top: 25px;
+            z-index: 8;
+        }
+
+        .contact-info {
+            color: rgba(0,0,0,.7);
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+    }
+}
+
+/*- Form -*/
+.card-form {
+    height: 100%;
+    margin-top: 50px;
+    width: 100%;
+
+    h5, p{
+        margin-left: 30px;
+        text-align: left;
+        word-wrap: break-word;
+    }
+}
+   
+.card-form .row + .row,
+.card-form .row + fieldset,
+.card-form fieldset + fieldset {
+    margin-top: 25px;
+}
+   
+input,
+textarea {
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #eee;
+    border-left: 0;
+    border-radius: 3px;
+    padding: 7px;
+    width: 100%;
+    
+    &:focus {
+     outline: 0;
+     border-bottom: 1px solid #0c81f6;
+    }
+}
+   
+textarea {
+    max-height: 150px;
+    min-height: 70px;
+    resize: vertical;
+}
+   
+.btn-primary {
+    background-color: #F06292;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 10px 35px rgba(50,50,93,.1),0 2px 15px rgba(0,0,0,.07);
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 8px 16px;
+    transition: background-color .25s ease-in, box-shadow .25s ease-in;
+    
+    &:focus,
+    &:hover {
+     background-color: lighten(#0c81f6, 15%);
+     box-shadow: 0 18px 35px rgba(50,50,93,.1),0 8px 15px rgba(0,0,0,.07);
+    }
+}

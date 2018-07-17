@@ -1,0 +1,248 @@
+/* For the social media buttons*/
+.social-links-card{
+    background: transparent;
+    bottom: 20px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+}
+
+.social-links {
+    padding: 0;
+    margin-top: 32px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+
+    li {
+        margin: 0 22px;
+    }
+    
+    i {
+        font-size: 18px;
+    }
+}
+
+.card-toggle {
+    z-index: 6;
+    cursor: pointer;
+    display: block;
+    font-size: 24px;
+    line-height: 1.8;
+    position: relative;
+    text-align: center;
+    transition: .3s ease;
+
+    p{
+        font-size: 13px;
+        letter-spacing: 2px;
+        text-decoration: underline;
+        text-transform:capitalize;
+        visibility: hidden;
+    }
+
+    .icon{
+        border: 2px solid transparent;
+        border-radius: 50%;
+        height: 55px;
+        line-height: 55px;
+        width: 55px;
+        vertical-align: center;
+    
+        span {
+            line-height: 55px;
+        }
+    }
+    
+    &.active{
+        color: white;
+
+        .icon {
+            border-color: white;
+        }
+
+        p {
+            visibility: visible;
+        }
+    }
+}
+
+.card-toggle:hover {
+    color: white;
+    p {
+        visibility: visible;
+    }
+}
+
+/* For the inidividual porfile cards */
+/* For the social media card*/
+
+.website-card, .linkedin-card, .codepen-card, .github-card, .blog-card {
+    color: white;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    top: 0;
+    width: 100%;
+        z-index: 4;
+    &.active {
+        z-index:5;
+    }
+}
+
+.social-card{
+    height: 100%;
+    left: 0;
+    opacity:1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    .card-content{
+        border-radius: 5px;
+        height: 100%;
+        padding: 100px 0 0;
+        width: 100%;
+        
+        .row{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            
+            .col{
+                width: 50%;
+                height: 100%;
+                border-spacing: 0;
+                position: relative;
+                transition: .3s ease .3s;
+                transform: translate3d(0,0,0);
+                vertical-align: top;
+                
+                h2{
+                    font-weight: 300;
+                    font-size: 2em;
+                    line-height: 1;
+                    margin: 0 0 30px;
+                    display: block;
+                }
+                
+                img{
+                    border-radius: 4px;
+                    max-width:90%;
+                    width: 100%;
+                }
+                
+                &.left{
+                    float: left;
+                    transform: translate3d(0,0, 0);
+                    margin-left: 15px;
+                    opacity: 1;
+                    padding-left: 30px;
+                }
+                &.right{
+                    margin-left: -12.5%;
+                    transform: translate3d(100px,0, 0);
+                    opacity: 1;
+                    padding-right: 19px;
+    
+                    img {
+                        width: auto;
+                        height: 250px;
+                    }
+                }
+            }
+        }
+    
+    }
+}
+
+.website-card {
+    .card-content {
+        background-color: #ffaeae;
+        -webkit-clip-path: circle(0% at 24% 86%);
+        clip-path: circle(0% at 24% 86%);
+
+    }
+    &.active {
+        .card-content {
+            -webkit-clip-path: circle(270% at 24% 86%);
+            clip-path: circle(270% at 24% 86%);
+
+            opacity: 1;
+            transition: all 500ms ease-in;
+        }
+        
+    }
+}
+
+.linkedin-card {
+    .card-content {
+        background-color: #03679B;
+        -webkit-clip-path: circle(0% at 36% 86%);
+        clip-path: circle(0% at 36% 86%);
+
+    }
+    &.active {
+        .card-content {
+            -webkit-clip-path: circle(270% at 36% 86%);
+            clip-path: circle(270% at 36% 86%);
+
+            opacity: 1;
+            transition: all 500ms ease-in;
+        }
+    }
+}
+
+.codepen-card {
+    .card-content {
+        background-color: #314159;
+        -webkit-clip-path: circle(0% at 50% 86%);
+        clip-path: circle(0% at 50% 86%);
+    }
+    &.active {
+        .card-content {
+            -webkit-clip-path: circle(270% at 50% 86%);
+            clip-path: circle(270% at 50% 86%);
+
+            opacity: 1;
+            transition: all 500ms ease-in;
+        }
+    }
+}
+
+.github-card {
+    .card-content {
+        background-color: #2F98D1;
+        -webkit-clip-path: circle(0% at 64% 86%);
+        clip-path: circle(0% at 64% 86%);
+    }
+    &.active {
+        .card-content {
+            -webkit-clip-path: circle(270% at 64% 86%);
+            clip-path: circle(270% at 64% 86%);
+
+            opacity: 1;
+            transition: all 500ms ease-in;
+        }
+    }
+}
+
+
+.blog-card {
+    .card-content {
+        background-color: #EEC77C;
+        -webkit-clip-path: circle(0% at 77% 86%);
+        clip-path: circle(0% at 77% 86%);
+    }
+    &.active {
+        .card-content {
+            -webkit-clip-path: circle(270% at 77% 86%);
+            clip-path: circle(270% at 77% 86%); 
+
+            opacity: 1;
+            transition: all 500ms ease-in;
+        }
+    }
+}
